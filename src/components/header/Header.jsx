@@ -10,8 +10,8 @@ const Header = () => {
       <img src={LOGO} alt="Amazon Logo" className='header__logo'/>
 
       <div className="header__search">
-        <input type="text" className='header__search-input'/>
-        <SearchIcon className='header__search-icon'/>
+          <input type="text" className='header__search-input'/>
+          <SearchIcon className='header__search-icon'/>
       </div>
 
       <div className="header__nav">
