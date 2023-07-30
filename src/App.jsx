@@ -1,3 +1,4 @@
+import React from "react"
 import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home"
@@ -10,8 +11,8 @@ function App() {
       <div className="app">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>
