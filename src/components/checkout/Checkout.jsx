@@ -3,6 +3,7 @@ import "./checkout.css"
 import AD1 from "../../assets/ad1.jpg"
 import Subtotal from "./Subtotal"
 
+
 const Checkout = () => {
   return (
     <div className='checkout'>
