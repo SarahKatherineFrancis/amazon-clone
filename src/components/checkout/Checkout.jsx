@@ -4,6 +4,7 @@ import AD1 from "../../assets/ad1.jpg"
 import Subtotal from "./Subtotal"
 import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from '../../StateProvider'
+import PRDT1 from "../../assets/product1.jpg"
 
 
 const Checkout = () => {
@@ -19,13 +20,13 @@ const Checkout = () => {
           </h2>
 
           {basket.map(item =>
-        <CheckoutProduct
-          id= {item.id}
-          image= {item.image}
-          title= {item.title}
-          price= {item.price}
-          rating= {item.rating}
-        />)}
+            <CheckoutProduct
+              id= {item.id}
+              image= {item.image}
+              title= {item.title}
+              price= {item.price}
+              rating= {item.rating}
+          />)}
         </div>
       </div>
 

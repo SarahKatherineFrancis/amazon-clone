@@ -3,7 +3,7 @@ import "./checkout-product.css"
 
 const CheckoutProduct = ({id, image, title, price, rating}) => {
   return (
-    <div className='checkoutProduct'>
+    <div className='checkout-product'>
       <img src={image} className='checkout-product__image' alt={title} />
 
       <div className="checkout-product___info">
