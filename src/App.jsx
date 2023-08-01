@@ -4,13 +4,14 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Checkout from "./components/checkout/Checkout";
+import Login from "./components/login/Login";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/login" />
+          <Route path="/login" element={<Login />}/>
           <Route
             path="/checkout"
             element={
