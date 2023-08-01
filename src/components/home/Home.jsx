@@ -1,19 +1,19 @@
-import React from 'react'
-import "./home.css"
-import BNR1 from "../../assets/banner1.jpg"
-import Product from "./Product"
-import PRDT1 from "../../assets/product1.jpg"
-import PRDT2 from "../../assets/product2.jpg"
-import PRDT3 from "../../assets/product3.jpg"
-import PRDT4 from "../../assets/product4.jpeg"
-import PRDT5 from "../../assets/product5.jpg"
-import PRDT6 from "../../assets/product6.jpg"
+import React from "react";
+import "./home.css";
+import BNR1 from "../../assets/banner1.jpg";
+import Product from "./Product";
+import PRDT1 from "../../assets/product1.jpg";
+import PRDT2 from "../../assets/product2.jpg";
+import PRDT3 from "../../assets/product3.jpg";
+import PRDT4 from "../../assets/product4.jpeg";
+import PRDT5 from "../../assets/product5.jpg";
+import PRDT6 from "../../assets/product6.jpg";
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div className="home">
       <div className="home__container">
-        <img src={BNR1} alt="Kitchen Favorites" className='home__image'/>
+        <img src={BNR1} alt="Kitchen Favorites" className="home__image" />
 
         <div className="home__row">
           <Product
@@ -30,7 +30,7 @@ const Home = () => {
             price={239.0}
             image={PRDT2}
             rating={4}
-           />
+          />
         </div>
 
         <div className="home__row">
@@ -68,7 +68,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
