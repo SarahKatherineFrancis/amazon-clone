@@ -4,8 +4,7 @@ import AD1 from "../../assets/ad1.jpg"
 import Subtotal from "./Subtotal"
 import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from '../../StateProvider'
-import PRDT1 from "../../assets/product1.jpg"
-
+import Header from '../header/Header'
 
 const Checkout = () => {
   const [{basket}, dispatch] = useStateValue()

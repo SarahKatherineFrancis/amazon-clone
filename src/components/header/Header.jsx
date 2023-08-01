@@ -21,14 +21,16 @@ const Header = () => {
       </div>
 
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__option-line1">
-            Hello
-          </span>
-          <span className="header__option-line2">
-            Sign in
-          </span>
-        </div>
+        <Link to="/login">
+          <div className="header__option">
+            <span className="header__option-line1">
+              Hello
+            </span>
+            <span className="header__option-line2">
+              Sign in
+            </span>
+          </div>
+        </Link>
 
         <div className="header__option">
           <span className="header__option-line1">
