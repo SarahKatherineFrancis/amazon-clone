@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./login.css"
 import LOGO from "../../assets/amazon-logo2.png"
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const signIn = e => {
+    e.preventDefault()
+  }
+
+  const register = e => {
+    e.preventDefault()
+  }
+
   return (
     <div className='login'>
       <Link to="/">
@@ -15,12 +26,21 @@ const Login = () => {
 
         <form>
           <h5>Email</h5>
-          <input type='text' />
+          <input type='text' value={email} onChange={e =>
+            setEmail(e.target.value)
+            }
+          />
 
           <h5>Password</h5>
-          <input type='password' />
+          <input type='password' value={password} onChange={e =>
+            setPassword(e.target.value)
+            }
+          />
 
-          <button className='login__sign-in-button'>Sign In</button>
+          <button className='login__sign-in-button' type="submit"
+          onClick={signIn}>
+            Sign In
+          </button>
         </form>
 
         <p>
@@ -29,7 +49,7 @@ const Login = () => {
           Interest-Based Ads Notice.
         </p>
 
-        <button className='login__register-button'>Create your Amazon account</button>
+        <button className='login__register-button' onClick={register}>Create your Amazon account</button>
       </div>
     </div>
   )
