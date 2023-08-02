@@ -6,7 +6,7 @@
 
 .checkout-product__image {
   object-fit: contain;
-  max-width: 120px;
+  max-width: 100px;
 }
 
 .checkout-product___info {
