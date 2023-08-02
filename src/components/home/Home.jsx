@@ -13,9 +13,12 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home__container">
+        {/* Home banner image */}
         <img src={BNR1} alt="Kitchen Favorites" className="home__image" />
 
+        {/* First row of products */}
         <div className="home__row">
+          {/* Product 1 */}
           <Product
             id="12321341"
             title="The Lean Startup: How Constant Innovation Creates
@@ -24,6 +27,7 @@ const Home = () => {
             image={PRDT1}
             rating={5}
           />
+          {/* Product 2 */}
           <Product
             id="49538094"
             title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
@@ -33,7 +37,9 @@ const Home = () => {
           />
         </div>
 
+        {/* Second row of products */}
         <div className="home__row">
+          {/* Product 3 */}
           <Product
             id="4903850"
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
@@ -41,6 +47,7 @@ const Home = () => {
             image={PRDT3}
             rating={3}
           />
+          {/* Product 4 */}
           <Product
             id="23445930"
             title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
@@ -48,6 +55,7 @@ const Home = () => {
             image={PRDT4}
             rating={5}
           />
+          {/* Product 5 */}
           <Product
             id="3254354345"
             title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
@@ -57,7 +65,9 @@ const Home = () => {
           />
         </div>
 
+        {/* Third row of products */}
         <div className="home__row">
+          {/* Product 6 */}
           <Product
             id="90829332"
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"

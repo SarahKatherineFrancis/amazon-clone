@@ -6,7 +6,7 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
-    //remove the item from the basket
+    // Function to remove the item from the basket when 'Remove from basket' button is clicked
     dispatch({
       type: "REMOVE_FROM_BASKET",
       id: id,
@@ -15,21 +15,27 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
 
   return (
     <div className="checkout-product">
+      {/* Product image */}
       <img src={image} className="checkout-product__image" alt={title} />
 
       <div className="checkout-product___info">
+        {/* Product title */}
         <p className="checkout-product__title">{title}</p>
+        {/* Product price */}
         <p className="checkout-product__price">
           <small>$</small>
           <strong>{price}</strong>
         </p>
+        {/* Product rating */}
         <div className="checkout-product__rating">
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐️</p>
+              // Render a star for each rating value
+              <p key={i}>⭐️</p>
             ))}
         </div>
+        {/* 'Remove from basket' button */}
         <button onClick={removeFromBasket}>Remove from basket</button>
       </div>
     </div>
