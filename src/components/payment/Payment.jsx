@@ -3,9 +3,14 @@ import "./payment.css";
 import { useStateValue } from "../../StateProvider";
 import CheckoutProduct from "../checkout/CheckoutProduct";
 import { Link } from "react-router-dom";
+import { useElements, useStripe, CardElement } from "@stripe/react-stripe-js";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
+
+  const stripe = useStripe();
+  const elements = useElements();
+
   return (
     <div className="payment">
       <div className="payment__container">
@@ -42,7 +47,11 @@ const Payment = () => {
           <div className="payment__title">
             <h3>Payment Method</h3>
           </div>
-          <div className="payment__details"></div>
+          <div className="payment__details">
+            <form>
+              <CardElement />
+            </form>
+          </div>
         </div>
       </div>
     </div>
