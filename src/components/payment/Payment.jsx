@@ -36,6 +36,8 @@ const Payment = () => {
     getClientSecret();
   }, [basket]);
 
+  console.log(clientSecret);
+
   // Handle form submission on payment button click
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,7 +54,7 @@ const Payment = () => {
         setSucceded(true);
         setError(null);
         setProcessing(false);
-        navigate.replace("/orders"); // Redirect to orders page after successful payment
+        navigate("/orders"); // Redirect to orders page after successful payment
       });
   };
 
