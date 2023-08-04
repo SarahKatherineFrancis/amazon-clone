@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./payment.css";
 import { useStateValue } from "../../StateProvider";
 import CheckoutProduct from "../checkout/CheckoutProduct";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useElements, useStripe, CardElement } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../../reducer";
 import axios from "axios";
 
 const Payment = () => {
+  const navigate = useNavigate();
   // Access the global state (basket and user) and the dispatch function from the data layer
   const [{ basket, user }, dispatch] = useStateValue();
 
@@ -41,7 +42,18 @@ const Payment = () => {
     setProcessing(true);
 
     // Perform the payment processing using Stripe
-    // const payload = await stripe;
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        setSucceded(true);
+        setError(null);
+        setProcessing(false);
+        navigate("/orders"); // Redirect to orders page after successful payment
+      });
   };
 
   // Handle changes in the CardElement
