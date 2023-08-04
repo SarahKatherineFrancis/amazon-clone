@@ -5,7 +5,7 @@ import CheckoutProduct from "../checkout/CheckoutProduct";
 import { Link, useNavigate } from "react-router-dom";
 import { useElements, useStripe, CardElement } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../../reducer";
-import axios from "axios";
+import axios from "../../axios";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ const Payment = () => {
         setSucceded(true);
         setError(null);
         setProcessing(false);
-        navigate("/orders"); // Redirect to orders page after successful payment
+        navigate.replace("/orders"); // Redirect to orders page after successful payment
       });
   };
 
