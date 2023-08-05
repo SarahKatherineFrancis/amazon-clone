@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useElements, useStripe, CardElement } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../../reducer";
 import axios from "../../axios";
+import { db } from "../../firebase";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -51,9 +52,24 @@ const Payment = () => {
         },
       })
       .then(({ paymentIntent }) => {
+        db.collection("users")
+          .doc(user.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
+
         navigate("/orders"); // Redirect to orders page after successful payment
       });
   };
