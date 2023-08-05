@@ -1,12 +1,10 @@
 /* eslint-disable no-unused-vars, max-len, indent, comma-dangle, object-curly-spacing */
-
+require("dotenv").config();
 const functions = require("firebase-functions");
 const logger = require("firebase-functions/logger");
 const express = require("express");
 const cors = require("cors");
-const stripe = require("stripe")(
-  "sk_test_51Nb5GICgEhGHHlG1frdmMmZ83FkZ5asuyQ6uJEQmFnALYoOSoTxE3DgrL8UDCUrTs8laiyt9zlfSGYZwtgOddleo00rSSYisap"
-);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 
