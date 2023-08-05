@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars, max-len, indent, comma-dangle, object-curly-spacing */
+
 const functions = require("firebase-functions");
 const logger = require("firebase-functions/logger");
 const express = require("express");

@@ -21,8 +21,10 @@
     "stripe": "^12.17.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-react-app": "^7.0.1",
     "firebase-functions-test": "^3.1.0"
   },
   "private": true
