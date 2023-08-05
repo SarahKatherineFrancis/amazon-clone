@@ -46,10 +46,12 @@ const Header = () => {
         </Link>
 
         {/* Returns and Orders option */}
-        <div className="header__option">
-          <span className="header__option-line1">Returns</span>
-          <span className="header__option-line2">& Orders</span>
-        </div>
+        <Link to="orders">
+          <div className="header__option">
+            <span className="header__option-line1">Returns</span>
+            <span className="header__option-line2">& Orders</span>
+          </div>
+        </Link>
 
         {/* Prime option */}
         <div className="header__option">

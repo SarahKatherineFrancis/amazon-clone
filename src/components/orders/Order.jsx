@@ -23,6 +23,7 @@ const Order = ({ order }) => {
           hideButton
         />
       ))}
+      <h3 className="order__total">Order Total: ${order.data.amount / 100}</h3>
     </div>
   );
 };
