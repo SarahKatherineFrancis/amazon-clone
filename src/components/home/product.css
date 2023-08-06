@@ -15,6 +15,7 @@
 .product__info {
   height: 100px;
   margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .product__price {
@@ -38,4 +39,25 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+}
+
+@media screen and (max-width: 425px) {
+  .product {
+    max-height: 250px;
+    min-width: 80px;
+  }
+
+  .product__info {
+    margin-bottom: -10px;
+    font-size: .6rem;
+  }
+
+  .product > img {
+    max-height: 100px;
+    margin-bottom: 0;
+  }
+
+  .product > button {
+    font-size: .6rem;
+  }
 }

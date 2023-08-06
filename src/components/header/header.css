@@ -70,3 +70,43 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 425px) {
+  .header {
+    height: 40px;
+  }
+
+  .header__logo {
+    width: 60px;
+  }
+
+  .header__search-input {
+    height: 5px;
+  }
+
+  .header__search-icon {
+    padding: 2px;
+    height: 21px !important;
+  }
+
+  .header__option {
+    margin: 16px 5px;
+  }
+
+  .header__option-line1 {
+    font-size: 8px;
+  }
+
+  .header__option-line2 {
+    font-size: 10px;
+  }
+
+  .header__option-basket{
+    font-size: 12px;
+  }
+
+  .header__option-basket-count {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+}
