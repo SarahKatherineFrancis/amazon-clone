@@ -10,8 +10,6 @@ This is a clone of the Amazon website built using React. The application aims to
 - [Usage](#usage)
 - [Firebase Setup](#firebase-setup)
 - [Stripe Integration](#stripe-integration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
